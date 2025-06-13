@@ -9,7 +9,11 @@ const Home = () => {
     { id: 3, title: "Money Heist", release_date: "11/8/2022" },
     { id: 4, title: "Peaky Blinders", release_date: "03/3/2023" },
   ];
-  const handleSearch = () => {};
+  const handleSearch = (e) => {
+    e.preventDefault();
+    alert(searchQuery);
+    setSearchQuery("Hello Musahaf");
+  };
   return (
     <div className="home">
       <form onSubmit={handleSearch} className="search_form">
@@ -26,9 +30,12 @@ const Home = () => {
         </button>
       </form>
       <div className="movies-grid">
-        {movies.map((movie) => (
-          <MovieCard movie={movie} key={movie.id} />
-        ))}
+        {movies.map(
+          (movie) =>
+            movie.title.toLowerCase().startsWith(searchQuery) && (
+              <MovieCard movie={movie} key={movie.id} />
+            )
+        )}
       </div>
     </div>
   );
