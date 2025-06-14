@@ -1,3 +1,4 @@
+import "../css/MovieCard.css";
 const MovieCard = ({ movie }) => {
   const onFavoriteClick = () => {
     alert("You are cute boy");

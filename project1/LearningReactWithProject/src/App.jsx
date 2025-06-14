@@ -2,7 +2,7 @@ import MovieCard from "./Components/MovieCard";
 import Home from "./Pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Favourite from "./Pages/Favourite";
-import "./App.css";
+import "./css/App.css";
 import NavBar from "./Components/NavBar";
 
 function App() {
